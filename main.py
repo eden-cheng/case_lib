@@ -1,6 +1,5 @@
 import concrete_f
 import tool_f
-#git
 
 def input_file():
     """从yaml中提取场景库的输入路径"""
