@@ -1,0 +1,13 @@
+#注意，使用相对路径，且路径适用linux
+
+#场景库
+lib_path: "./TC_LIB_210205.xlsx"
+
+#输出的具体场景（路径，非文件名）
+case_path_cc_veh: "./concrete_case/"
+
+#实车测试特征值
+cc_charact_values:
+  cc_veh_noload: "./yaml_files/cc_veh_noload.yaml"
+  cc_veh_payload: "./yaml_files/cc_veh_payload.yaml"
+  cc_veh_truck_target: "./yaml_files/cc_veh_truck_target.yaml"

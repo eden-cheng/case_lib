@@ -1,0 +1,108 @@
+#CC，空载时，无目标或轿车目标，特征值的选取。
+
+cc_1_1:
+  para:
+    uphill: ['1% uphill', '3% uphill']
+    downhill: ['1% downhill', '3% downhill']
+    curve: ['500m curve', '700m curve']
+  tag:
+    geo: ['平直路', 'curve', 'downhill', 'uphill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_2_1:
+  para:
+    uphill: ['1% uphill', '3% uphill']
+    downhill: ['1% downhill', '3% downhill']
+  tag:
+    geo: ['平直路', 'downhill', 'uphill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_2_2:
+  para:
+    uphill: ['1% uphill', '3% uphill']
+    downhill: ['1% downhill', '3% downhill']
+  tag:
+    geo: ['平直路', 'downhill', 'uphill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_8_1:
+  para:
+  tag:
+    geo: ['平直路']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
+
+cc_8_2:
+  para:
+    curve: ['700m curve']
+  tag:
+    geo: ['curve']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
+
+cc_8_3:
+  para:
+    curve: ['700m curve']
+  tag:
+    geo: ['curve']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
+
+cc_8_4:
+  para:
+    uphill: ['3% uphill']
+  tag:
+    geo: ['uphill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
+
+cc_8_5:
+  para:
+    uphill: ['3% uphill']
+  tag:
+    geo: ['uphill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
+
+cc_11_1:
+  para:
+    tv_speed: {'120kph' : '40kph'}
+    tv_acc: ['-1mpss', '-3mpss', '-5mpss']
+    tv_relate_hv_distance: ['30m', '40m', '50m']
+    uphill: ['3% uphill']
+    downhill: ['3% downhill']
+    curve: ['700m curve']
+  tag:
+    geo: ['平直路', 'curve', 'downhill', 'uphill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
