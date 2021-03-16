@@ -17,5 +17,6 @@ class Concrete_cc():
     def cc_ex(self):
         self.func('cc_1')   #主车以限速巡航，无目标
         self.func('cc_2')   #运动中进AD，无目标加速至限速
+        self.func('cc_3')   #运动中进AD，无目标加速至限速
         self.func('cc_8')   #approach, 接近静止目标车辆
         self.func('cc_11')  #cutin, 切入后目标车减速

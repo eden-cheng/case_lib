@@ -16,6 +16,7 @@ cc_1_1:
 
 cc_2_1:
   para_action:
+    hv_initial: ['40kph', '60kph', '80kph']
   para_odd:
     uphill: ['1%', '3%']
     downhill: ['1%', '3%']
@@ -27,13 +28,28 @@ cc_2_1:
     tv: ['none']
     speed_limit: ['80kph']
 
-cc_2_2:
+cc_3_1:
   para_action:
+      hv_initial: ['40kph', '60kph']
+      hv_deviation: ['10cm', '20cm', '30cm']
   para_odd:
-    uphill: ['1%', '3%']
-    downhill: ['1%', '3%']
+    curve: ['500m', '700m']
   tag:
-    geo: ['平直路', 'downhill', 'uphill']
+    geo: ['平直路', 'curve']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_3_2:
+  para_action:
+      hv_initial: ['40kph', '60kph']
+      hv_deviation: ['10cm', '20cm', '30cm']
+  para_odd:
+    curve: ['500m', '700m']
+  tag:
+    geo: ['平直路', 'curve']
     load: ['noload']
     illumination: ['day']
     weather: ['sunny']
@@ -101,9 +117,10 @@ cc_8_5:
 
 cc_11_1:
   para_action:
-    tv_speed: {'120kph' : '40kph'}
+    tv_initial: ['120kph']
+    tv_target: ['40kph']
     tv_acc: ['-1mpss', '-3mpss', '-5mpss']
-    tv_relate_hv_distance: ['30m', '40m', '50m']
+    relative_dis: ['30m', '40m', '50m']
   para_odd:
     uphill: ['3%']
     downhill: ['3%']

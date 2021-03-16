@@ -28,9 +28,10 @@ cc_8_1:
 
 cc_11_1:
   para_action:
-    tv_speed: {'120kph' : '40kph'}
+    tv_initial: ['120kph']
+    tv_target: ['40kph']
     tv_acc: ['-3mpss']
-    tv_relate_hv_distance: ['40m']
+    relative_dis: ['40m']
   para_odd:
     uphill: ['3%']
     downhill: ['3%']
