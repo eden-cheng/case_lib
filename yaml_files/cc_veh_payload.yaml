@@ -1,10 +1,11 @@
 #CC，重载时，无目标或轿车目标，特征值的选取。
 
 cc_1_1:
-  para:
-    uphill: ['1% uphill', '3% uphill']
-    downhill: ['1% downhill', '3% downhill']
-    curve: ['500m curve', '700m curve']
+  para_action:
+  para_odd:
+    uphill: ['1%', '3%']
+    downhill: ['1%', '3%']
+    curve: ['500m', '700m']
   tag:
     geo: ['平直路', 'curve', 'downhill', 'uphill']
     load: ['payload']
@@ -14,7 +15,8 @@ cc_1_1:
     speed_limit: ['80kph']
 
 cc_8_1:
-  para:
+  para_action:
+  para_odd:
   tag:
     geo: ['平直路']
     load: ['payload']
@@ -25,13 +27,14 @@ cc_8_1:
 
 
 cc_11_1:
-  para:
+  para_action:
     tv_speed: {'120kph' : '40kph'}
     tv_acc: ['-3mpss']
     tv_relate_hv_distance: ['40m']
-    uphill: ['3% uphill']
-    downhill: ['3% downhill']
-    curve: ['700m curve']
+  para_odd:
+    uphill: ['3%']
+    downhill: ['3%']
+    curve: ['700m']
   tag:
     geo: ['平直路', 'curve', 'downhill', 'uphill']
     load: ['payload']

@@ -3,19 +3,19 @@
 #case与行号的对应关系
 row_relation:
   cc_1: {'cc_1_1' : '4'}
-  cc_2 : {'cc_2_1' : '6', 'cc_2_2' : '7'}
-  cc_8: {'cc_8_1' : '23', 'cc_8_2' : '24', 'cc_8_3' : '25', 'cc_8_4' : '26', 'cc_8_5' : '27'}
-  cc_11: {'cc_11_1': '36'}
+  cc_2 : {'cc_2_1' : '6'}
+  cc_8: {'cc_8_1' : '24', 'cc_8_2' : '25', 'cc_8_3' : '26', 'cc_8_4' : '27', 'cc_8_5' : '28'}
+  cc_11: {'cc_11_1': '37'}
 
 #case与列号的对应关系
 colum_relation:
   id : 0
   feature : 2
   summary : 3
-  initial status of hv : 36
-  initial status of tv : 37
-  action of hv : 38
-  action of tv : 39
-  subjective criteria : 42
-  objective criteria : 43
+  initial status of hv : 11
+  initial status of tv : 12
+  action of hv : 13
+  action of tv : 14
+  subjective criteria : 17
+  objective criteria : 18
 

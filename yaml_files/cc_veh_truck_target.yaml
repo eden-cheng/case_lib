@@ -1,7 +1,8 @@
 #CC，目标车为卡车时，空载，特征值的选取
 
 cc_8_1:
-  para:
+  para_action:
+  para_odd:
   tag:
     geo: ['平直路']
     load: ['noload']
@@ -11,8 +12,9 @@ cc_8_1:
     speed_limit: ['80kph']
 
 cc_8_2:
-  para:
-    curve: ['700m curve']
+  para_action:
+  para_odd:
+    curve: ['700m']
   tag:
     geo: ['curve']
     load: ['noload']
@@ -22,8 +24,9 @@ cc_8_2:
     speed_limit: ['80kph']
 
 cc_8_3:
-  para:
-    curve: ['700m curve']
+  para_action:
+  para_odd:
+    curve: ['700m']
   tag:
     geo: ['curve']
     load: ['noload']
@@ -33,8 +36,9 @@ cc_8_3:
     speed_limit: ['80kph']
 
 cc_8_4:
-  para:
-    uphill: ['3% uphill']
+  para_action:
+  para_odd:
+    uphill: ['3%']
   tag:
     geo: ['uphill']
     load: ['noload']
@@ -44,8 +48,9 @@ cc_8_4:
     speed_limit: ['80kph']
 
 cc_8_5:
-  para:
-    uphill: ['3% uphill']
+  para_action:
+  para_odd:
+    uphill: ['3%']
   tag:
     geo: ['uphill']
     load: ['noload']
@@ -55,13 +60,14 @@ cc_8_5:
     speed_limit: ['80kph']
 
 cc_11_1:
-  para:
+  para_action:
     tv_speed: {'120kph' : '40kph'}
     tv_acc: ['-3mpss']
     tv_relate_hv_distance: ['40m']
-    uphill: ['3% uphill']
-    downhill: ['3% downhill']
-    curve: ['700m curve']
+  para_odd:
+    uphill: ['3%']
+    downhill: ['3%']
+    curve: ['700m']
   tag:
     geo: ['平直路', 'curve', 'downhill', 'uphill']
     load: ['noload']

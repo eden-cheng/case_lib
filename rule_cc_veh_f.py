@@ -19,7 +19,7 @@ class Rule_cc_veh():
         """对坡度展开"""
         #默认平直路
         if '平直路' in self.arr_tag['geo']: 
-            dic_default = {'summary' : self.func('summary') + ', 平直路', 'road_geo' : '平直路'}
+            dic_default = {'summary' : self.func('summary') + ' (平直路)', 'road_geo' : '平直路'}
             self.temp.append(dic_default)
         #对弯道和坡道展开
         geos = ['curve', 'uphill', 'downhill']
@@ -27,7 +27,7 @@ class Rule_cc_veh():
             if geo in self.arr_tag['geo']:
                 #self.func_01(self.arr_para[geo], self.case[3].value, geo)
                 for i in self.arr_para[geo]:
-                    dic = {'summary' : self.func('summary') + ', ' + i, 'road_geo' : geo}
+                    dic = {'summary' : self.func('summary') + ' (' + i + geo + ')', 'road_geo' : geo}
                     self.temp.append(dic)
 
     def tag_ex(self):

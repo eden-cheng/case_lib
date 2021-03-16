@@ -22,10 +22,11 @@ class Expand():
             #如果特征值yaml中的键与relation中的id不对应会报错，所以需要先做判断
             if id in self.yaml_content.keys():
                 #step1: 从yaml文件中导入实车测试的特征值
-                para = (self.yaml_content[id])['para']
+                para_action = (self.yaml_content[id])['para_action']
+                para_odd = (self.yaml_content[id])['para_odd']
                 tag = (self.yaml_content[id])['tag']
                 #step2: 将规则实例化，借助Rule_cc_veh类
-                rule_obj = rule_cc_veh_f.Rule_cc_veh(case, para, tag)
+                rule_obj = rule_cc_veh_f.Rule_cc_veh(case, para_odd, tag)
                 #step3: 展开成具体case，以字典的格式
                 self.expand(rule_obj)    #rule_obj的传入参数是一个实例化类的对象
     
