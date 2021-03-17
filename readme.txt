@@ -29,4 +29,4 @@
 4. 调整了参数yaml的格式，将空载，无目标，轿车目标，卡车目标等前提因素单独作为一个yaml
 
 hello
-添加home_pc
+删除home_pc的SSH key
