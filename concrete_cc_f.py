@@ -11,12 +11,10 @@ class Concrete_cc():
         self.ex_obj = tool_f.Expand(ws, yaml_content)
     
     def func(self, name):
-        relation = self.row_relation[name]
-        self.ex_obj.expand_group(relation)
+        if name in self.row_relation.keys():
+            relation = self.row_relation[name]
+            self.ex_obj.expand_group(relation)
 
     def cc_ex(self):
-        self.func('cc_1')   #主车以限速巡航，无目标
-        self.func('cc_2')   #运动中进AD，无目标加速至限速
-        self.func('cc_3')   #运动中进AD，无目标加速至限速
-        self.func('cc_8')   #approach, 接近静止目标车辆
-        self.func('cc_11')  #cutin, 切入后目标车减速
+        for i in range(1, 16):
+            self.func('cc_' + str(i))

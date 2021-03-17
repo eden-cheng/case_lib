@@ -20,3 +20,8 @@
   1）针对上面的yaml调整，对rule.py做修改；
   2）原先para_action部分也采用追加形式，现在修改为参数替换replace的方式。前一种方式，不同case需要不同的追加描述，后者适应性更好;
   3）通过上一步的改进，rule.py的适用性更好，不仅可以使用cc,而且可以使用ilc 
+
+0317改进：（程伟）
+1. ralation.yaml 中增加了行列的对应关系
+2. concrete_cc.py 增加了判断，如果relation.yaml中缺少了某个case，依然可以正常输出
+3. concrete_cc.py 中对case的遍历，采用了for循环的方式
