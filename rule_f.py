@@ -3,12 +3,13 @@ import re
 
 yaml_path_relation = "./yaml_files/relation.yaml"
 
-class Rule_cc_veh():
-    def __init__(self, case, arr_action, arr_odd, arr_tag):
+class Rule():
+    def __init__(self, case, arr_action, arr_odd, arr_geo_tag, arr_pre_tag):
         self.case = case
         self.arr_action = arr_action
         self.arr_odd = arr_odd
-        self.arr_tag = arr_tag
+        self.arr_pre_tag = arr_pre_tag
+        self.arr_geo_tag = arr_geo_tag
         self.temp = []
         #提取relations yaml中的行列对应关系
         t_obj = tool_f.Tool()
@@ -20,13 +21,13 @@ class Rule_cc_veh():
     def geo_ex(self):
         """对道路几何展开。既有对summary_odd的追加，也有tag"""
         #默认平直路
-        if '平直路' in self.arr_tag['geo']: 
+        if '平直路' in self.arr_geo_tag['geo']: 
             dic_default = {'summary' : self.func('summary') + ' (平直路)', 'road_geo' : '平直路'}
             self.temp.append(dic_default)
         #对弯道和坡道展开
         geos = ['curve', 'uphill', 'downhill']
         for geo in geos:
-            if geo in self.arr_tag['geo']:
+            if geo in self.arr_geo_tag['geo']:
                 #self.func_01(self.arr_odd[geo], self.case[3].value, geo)
                 for i in self.arr_odd[geo]:
                     dic = {'summary' : self.func('summary') + ' (' + i + '_' + geo + ')', 'road_geo' : geo}
@@ -44,16 +45,12 @@ class Rule_cc_veh():
                 self.temp = arr
 
     def pre_ex(self):
-        tags = ['weather', 'illumination', 'load', 'tv', 'speed_limit']
-        for tag in tags:
-            #if tag in self.arr_tag.keys():
-            arr = []
-            for i in self.temp:
-                for j in self.arr_tag[tag]:
-                    i[tag] = j
-                    arr.append(i.copy())   #注意，一定要 .copy()
-            self.temp = arr
-            # arr = []
+        arr = []
+        for i in self.temp:
+            for key, value in self.arr_pre_tag.items():
+                i[key] = value
+            arr.append(i.copy())   #注意，一定要 .copy()
+        self.temp = arr
     
     def excution_input(self):
         str01 = "initial status of hv"

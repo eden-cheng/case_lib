@@ -1,63 +1,38 @@
-#CC，目标车为卡车时，空载，特征值的选取
+#CC，空载，卡车目标
 
 cc_8_1:
   para_action:
   para_odd:
-  tag:
+  geo_tag:
     geo: ['平直路']
-    load: ['noload']
-    illumination: ['day']
-    weather: ['sunny']
-    tv: ['truck']
-    speed_limit: ['80kph']
 
 cc_8_2:
   para_action:
   para_odd:
     curve: ['700m']
-  tag:
+  geo_tag:
     geo: ['curve']
-    load: ['noload']
-    illumination: ['day']
-    weather: ['sunny']
-    tv: ['truck']
-    speed_limit: ['80kph']
 
 cc_8_3:
   para_action:
   para_odd:
     curve: ['700m']
-  tag:
+  geo_tag:
     geo: ['curve']
-    load: ['noload']
-    illumination: ['day']
-    weather: ['sunny']
-    tv: ['truck']
-    speed_limit: ['80kph']
 
 cc_8_4:
   para_action:
   para_odd:
     uphill: ['3%']
-  tag:
+  geo_tag:
     geo: ['uphill']
-    load: ['noload']
-    illumination: ['day']
-    weather: ['sunny']
-    tv: ['truck']
-    speed_limit: ['80kph']
 
 cc_8_5:
   para_action:
   para_odd:
     uphill: ['3%']
-  tag:
+  geo_tag:
     geo: ['uphill']
-    load: ['noload']
-    illumination: ['day']
-    weather: ['sunny']
-    tv: ['truck']
-    speed_limit: ['80kph']
 
 cc_11_1:
   para_action:
@@ -69,10 +44,5 @@ cc_11_1:
     uphill: ['3%']
     downhill: ['3%']
     curve: ['700m']
-  tag:
+  geo_tag:
     geo: ['平直路', 'curve', 'downhill', 'uphill']
-    load: ['noload']
-    illumination: ['day']
-    weather: ['sunny']
-    tv: ['truck']
-    speed_limit: ['80kph']

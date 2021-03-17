@@ -5,15 +5,17 @@ import os
 
 yaml_path_file = "./yaml_files/file.yaml"
 yaml_path_relation = "./yaml_files/relation.yaml"
+yaml_path_pre = "./yaml_cc/cc_prerequsite.yaml"
 
 class Expand():
-    def __init__(self, ws, yaml_content):
+    def __init__(self, ws, yaml_title, yaml_content):
         self.ws = ws
+        self.yaml_title = yaml_title
         self.yaml_content = yaml_content
         #之所以放在此处，而不是放在下面函数中，
         #一方面，因为当cc-1,cc-8,cc-11轮流调用下面的expand函数时，可以在全局变量上追加。如果做成局部变量，会被覆盖
         #另一方面，当多种特征值yaml文件调用时，self.arr会被初始化清空
-        self.arr = []  
+        self.arr = []
 
     def expand_group(self, relation):
         for id, row_num in relation.items():
@@ -24,9 +26,15 @@ class Expand():
                 #step1: 从yaml文件中导入实车测试的特征值
                 para_action = (self.yaml_content[id])['para_action']
                 para_odd = (self.yaml_content[id])['para_odd']
-                tag = (self.yaml_content[id])['tag']
+                
+                geo_tag = (self.yaml_content[id])['geo_tag']
+                #print(tag)
+                dic_pre = Tool().yaml_manage(yaml_path_pre)
+                if self.yaml_title in dic_pre.keys():
+                    pre_tag = dic_pre[self.yaml_title]
+
                 #step2: 将规则实例化，借助Rule_cc_veh类
-                rule_obj = rule_f.Rule_cc_veh(case, para_action, para_odd, tag)
+                rule_obj = rule_f.Rule(case, para_action, para_odd, geo_tag, pre_tag)
                 #step3: 展开成具体case，以字典的格式
                 self.expand(rule_obj)    #rule_obj的传入参数是一个实例化类的对象
     

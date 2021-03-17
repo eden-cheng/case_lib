@@ -3,9 +3,10 @@
 2. 参数yaml中的参数名必须与case库中summary部分的参数名一致
 
 想法记录：
-1. 开发一个excel转yaml的工具
+1. 开发一个excel转yaml的工具（高优先级）
 2. relation.yaml 中行列关系，通过自动化抓取的方式实现
 3. 配置vscod的编译环境
+4. 如何满足700mcurve时做多个遍历，但是在500mcurve时只做单个或少量遍历？？？？（高优先级）
 
 0316改进：（程伟）
 1. 调整了case库文件的格式，比如
@@ -25,3 +26,4 @@
 1. ralation.yaml 中增加了行列的对应关系
 2. concrete_cc.py 增加了判断，如果relation.yaml中缺少了某个case，依然可以正常输出
 3. concrete_cc.py 中对case的遍历，采用了for循环的方式
+4. 调整了参数yaml的格式，将空载，无目标，轿车目标，卡车目标等前提因素单独作为一个yaml

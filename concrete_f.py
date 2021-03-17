@@ -17,7 +17,7 @@ class Concrete():
         cc_veh_value = self.t_obj.charact_value(yaml_path_file, 'cc_charact_values')
         #外层循环是空载，满载，卡车目标
         for key,value in cc_veh_value.items():
-            obj = concrete_cc_f.Concrete_cc(ws, value)
+            obj = concrete_cc_f.Concrete_cc(ws, key, value)
             obj.cc_ex()
             arr = obj.ex_obj.arr
             self.t_obj.import_data(arr, key)    #前面通过cc_ex后，具体化的case全部添加到字典中，现在写入excel中
