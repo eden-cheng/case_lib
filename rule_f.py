@@ -53,7 +53,7 @@ class Rule_cc_veh():
                     i[tag] = j
                     arr.append(i.copy())   #注意，一定要 .copy()
             self.temp = arr
-            arr = []
+            # arr = []
     
     def excution_input(self):
         excution = {'initial status of hv': self.func('initial status of hv'), 

@@ -16,5 +16,5 @@ class Concrete_cc():
             self.ex_obj.expand_group(relation)
 
     def cc_ex(self):
-        for i in range(1, 16):
+        for i in range(1, 30):
             self.func('cc_' + str(i))
