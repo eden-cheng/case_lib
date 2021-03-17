@@ -17,8 +17,8 @@ class Rule_cc_veh():
     def func(self, title):
         return self.case[self.colum_relation[title]].value
 
-    def summary_odd_ex(self):
-        """对坡度展开"""
+    def geo_ex(self):
+        """对道路几何展开。既有对summary_odd的追加，也有tag"""
         #默认平直路
         if '平直路' in self.arr_tag['geo']: 
             dic_default = {'summary' : self.func('summary') + ' (平直路)', 'road_geo' : '平直路'}
@@ -43,7 +43,7 @@ class Rule_cc_veh():
                         arr.append(k)
                 self.temp = arr
 
-    def tag_ex(self):
+    def pre_ex(self):
         tags = ['weather', 'illumination', 'load', 'tv', 'speed_limit']
         for tag in tags:
             #if tag in self.arr_tag.keys():
@@ -56,16 +56,23 @@ class Rule_cc_veh():
             # arr = []
     
     def excution_input(self):
-        excution = {'initial status of hv': self.func('initial status of hv'), 
-                    'initial status of tv': self.func('initial status of tv'), 
-                    'action of hv': self.func('action of hv'), 'action of tv': self.func('action of tv')}
+        str01 = "initial status of hv"
+        str02 = "initial status of tv"
+        str03 = "action of hv"
+        str04 = "action of tv"
+        excution = {str01: self.func(str01), 
+                    str02: self.func(str02), 
+                    str03: self.func(str03), 
+                    str04: self.func(str04)}
         for i in self.temp:
             for key, value in excution.items():
                 i[key] = value
 
     def criteria_input(self):  #后面需要根据通过指标来展开
-        excution = {'subjective criteria': self.func('subjective criteria'), 
-                    'objective criteria': self.func('objective criteria')}
+        str05 = 'subjective criteria'
+        str06 = 'objective criteria'
+        excution = {str05: self.func(str05), 
+                    str06: self.func(str06)}
         for i in self.temp:
             for key, value in excution.items():
                 i[key] = value

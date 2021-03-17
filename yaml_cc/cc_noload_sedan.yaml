@@ -1,0 +1,265 @@
+#CC，空载时，无目标或轿车目标，特征值的选取。
+
+cc_1_1:
+  para_action:
+  para_odd:
+    uphill: ['1%', '3%', ‘5%’]
+    downhill: ['1%', '3%', ‘5%’]
+    curve: ['500m', '700m', ‘900m’]
+  tag:
+    geo: ['平直路', 'curve', 'downhill', 'uphill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_2_1:
+  para_action:
+    hv_initial: ['40kph', '60kph', '80kph']
+  para_odd:
+    uphill: ['1%', '3%', '5%']
+    downhill: ['1%', '3%']
+  tag:
+    geo: ['平直路', 'downhill', 'uphill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_3_1:
+  para_action:
+      hv_initial: ['40kph', '60kph']
+      hv_deviation: ['10cm', '20cm', '30cm']
+  para_odd:
+    curve: ['500m', '700m']
+  tag:
+    geo: ['平直路', 'curve']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_3_2:
+  para_action:
+      hv_initial: ['40kph', '60kph']
+      hv_deviation: ['10cm', '20cm', '30cm']
+  para_odd:
+    curve: ['500m', '700m']
+  tag:
+    geo: ['平直路', 'curve']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_4_1:
+  para_action:
+      tv_target: ['20kph', '40kph', '60kph', '80kph']
+  para_odd:
+    uphill: ['1%', '3%', '5%']
+    downhill: ['1%', '3%', '5%']
+    curve: ['500m', '700m', '900m']
+  tag:
+    geo: ['平直路', 'curve', 'uphill', 'downhill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_5_1:
+  para_action:
+      tv_initial: ['40kph']
+      tv_target: ['70kph']
+      tv_acc: ['1mpss', '2mpss', '3mpss']
+  para_odd:
+    uphill: ['1%', '3%', '5%']
+    downhill: ['1%', '3%', '5%']
+  tag:
+    geo: ['平直路', 'uphill', 'downhill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_5_2:
+  para_action:
+      tv_initial: ['0kph']
+      tv_target: ['60kph']
+      tv_acc: ['1mpss', '2mpss', '3mpss']
+  para_odd:
+    uphill: ['1%', '3%', '5%']
+    downhill: ['1%', '3%', '5%']
+  tag:
+    geo: ['平直路', 'uphill', 'downhill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_6_1:
+  para_action:
+      tv_initial: ['80kph']
+      tv_target: ['40kph']
+      tv_acc: ['1mpss', '3mpss', '5mpss', '7mpss']
+  para_odd:
+    uphill: ['1%', '3%', '5%']
+    downhill: ['1%', '3%', '5%']
+  tag:
+    geo: ['平直路', 'uphill', 'downhill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_6_2:
+  para_action:
+      tv_initial: ['60kph']
+      tv_target: ['0kph']
+      tv_acc: ['1mpss', '3mpss', '5mpss', '7mpss']
+  para_odd:
+    uphill: ['1%', '3%', '5%']
+    downhill: ['1%', '3%', '5%']
+  tag:
+    geo: ['平直路', 'uphill', 'downhill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_7_1:
+  para_action:
+  para_odd:
+    uphill: ['3%']
+    downhill: ['3%']
+  tag:
+    geo: ['平直路', 'uphill', 'downhill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_7_2:
+  para_action:
+  para_odd:
+    uphill: ['3%']
+    downhill: ['3%']
+  tag:
+    geo: ['平直路', 'uphill', 'downhill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_7_3:
+  para_action:
+  para_odd:
+    uphill: ['3%']
+    downhill: ['3%']
+  tag:
+    geo: ['平直路', 'uphill', 'downhill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_7_4:
+  para_action:
+  para_odd:
+    uphill: ['3%']
+    downhill: ['3%']
+  tag:
+    geo: ['平直路', 'uphill', 'downhill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['none']
+    speed_limit: ['80kph']
+
+cc_8_1:
+  para_action:
+  para_odd:
+  tag:
+    geo: ['平直路']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
+
+cc_8_2:
+  para_action:
+  para_odd:
+    curve: ['700m']
+  tag:
+    geo: ['curve']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
+
+cc_8_3:  
+  para_action:
+  para_odd:
+    curve: ['700m']
+  tag:
+    geo: ['curve']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
+
+cc_8_4:
+  para_action:
+  para_odd:
+    uphill: ['3%']
+  tag:
+    geo: ['uphill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
+
+cc_8_5:
+  para_action:
+  para_odd:
+    uphill: ['3%']
+  tag:
+    geo: ['uphill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
+
+cc_11_1:
+  para_action:
+    tv_initial: ['120kph']
+    tv_target: ['40kph']
+    tv_acc: ['-1mpss', '-3mpss', '-5mpss']
+    relative_dis: ['30m', '40m', '50m']
+  para_odd:
+    uphill: ['3%']
+    downhill: ['3%']
+    curve: ['700m']
+  tag:
+    geo: ['平直路', 'curve', 'downhill', 'uphill']
+    load: ['noload']
+    illumination: ['day']
+    weather: ['sunny']
+    tv: ['sedan']
+    speed_limit: ['80kph']
