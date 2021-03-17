@@ -23,7 +23,7 @@
   3）通过上一步的改进，rule.py的适用性更好，不仅可以使用cc,而且可以使用ilc 
 
 0317改进：（程伟）
-1. ralation.yaml 中增加了行列的对应关系
+1. ralation.yaml 中增加了case
 2. concrete_cc.py 增加了判断，如果relation.yaml中缺少了某个case，依然可以正常输出
 3. concrete_cc.py 中对case的遍历，采用了for循环的方式
 4. 调整了参数yaml的格式，将空载，无目标，轿车目标，卡车目标等前提因素单独作为一个yaml
