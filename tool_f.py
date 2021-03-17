@@ -31,9 +31,9 @@ class Expand():
                 self.expand(rule_obj)    #rule_obj的传入参数是一个实例化类的对象
     
     def expand(self, rule_obj):   
-        rule_obj.summary_odd_ex()       #将道路曲率或坡道等几何因素展开，一方面展开tag，一方面展开参数
+        rule_obj.geo_ex()       #将道路曲率或坡道等几何因素展开，一方面展开tag，一方面展开参数
         rule_obj.summary_action_ex()             #将目标车的可设参数展开
-        rule_obj.tag_ex()            #将光照，天气，目标类型等tag展开
+        rule_obj.pre_ex()            #将光照，天气，目标类型等tag展开
         rule_obj.excution_input()    #将执行部分的内容填到展开的case中
         rule_obj.criteria_input()    #将通过条件部分的内容填到展开的case中
         rule_obj.other_ex()          #将id，feature名填到case中
