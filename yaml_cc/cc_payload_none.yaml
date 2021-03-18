@@ -1,10 +1,85 @@
-#CC，重载，无目标
+###CC，空载，无目标。
 
+#目标巡航
 cc_1_1:
-  para_action:
-  para_odd:
-    uphill: ['1%', '3%']
-    downhill: ['1%', '3%']
-    curve: ['500m', '700m']
+  para_group:
+    group1:
+      para_action:
+      para_odd:
+        uphill: ['缓坡', '适中', '陡坡']
+        downhill: ['缓坡', '适中', '陡坡']
+        curve: ['小弯', '适中', '急弯']
+        default: ['平直路']
   geo_tag:
-    geo: ['平直路', 'curve', 'downhill', 'uphill']
+    geo: ['default', 'curve', 'downhill', 'uphill']
+
+#运动中，居中进AD
+cc_2_1:
+  para_group:
+    group1:
+      para_action:
+        hv_initial: ['40kph', '60kph', '80kph']
+      para_odd:
+        default: ['平直路']
+    group2:
+      para_action:
+        hv_initial: ['40kph', '60kph', '80kph']
+      para_odd:
+        uphill: ['缓和']
+        downhill: ['缓和']
+    group3:
+      para_action:
+        hv_initial: ['60kph']
+      para_odd:
+        uphill: ['适中']
+        downhill: ['适中']
+  geo_tag:
+    geo: ['default', 'downhill', 'uphill']
+
+#运动中，偏置向左进AD
+cc_3_1:
+  para_group:
+    group1:
+      para_action:
+          hv_initial: ['40kph', '60kph']
+          hv_deviation: ['10cm', '20cm', '30cm']
+      para_odd:
+        default: ['平直路']
+    group2:
+      para_action:
+          hv_initial: ['40kph', '60kph']
+          hv_deviation: ['10cm', '20cm', '30cm']
+      para_odd:
+        curve: ['适中']
+    group3:
+      para_action:
+          hv_initial: ['80kph']
+          hv_deviation: ['10cm', '20cm']
+      para_odd:
+        curve: ['适中']
+    group4:
+      para_action:
+          hv_initial: ['60kph']
+          hv_deviation: ['10cm', '20cm', '30cm']
+      para_odd:
+        curve: ['缓和']
+  geo_tag:
+    geo: ['default', 'curve']
+
+#运动中，偏置向右进AD
+cc_3_2:
+  para_group:
+    group1:
+      para_action:
+          hv_initial: ['60kph']
+          hv_deviation: ['10cm', '20cm', '30cm']
+      para_odd:
+        default: ['平直路']
+    group2:
+      para_action:
+          hv_initial: ['60kph']
+          hv_deviation: ['10cm', '20cm', '30cm']
+      para_odd:
+        curve: ['适中']
+  geo_tag:
+    geo: ['default', 'curve']

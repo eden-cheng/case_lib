@@ -30,11 +30,6 @@
 2. 参数yaml中的参数名必须与case库中summary部分的参数名一致
 3. para，para_action，para_odd中及时后面是空的，也要写
 
-<<<<<<< HEAD
 想法记录：
 1. 开发一个excel转yaml的工具
 2. relation.yaml 中行列关系，通过自动化抓取的方式实现
-=======
-hello
-更改了home_pc的ssh key
->>>>>>> 42a74649e1b23cea241c1ca0bcd47e7259068656
