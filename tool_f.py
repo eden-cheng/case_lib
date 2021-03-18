@@ -26,13 +26,11 @@ class Expand():
                 #step1: 从yaml文件中导入实车测试的特征值
                 para_action = (self.yaml_content[id])['para_action']
                 para_odd = (self.yaml_content[id])['para_odd']
-                
                 geo_tag = (self.yaml_content[id])['geo_tag']
                 #print(tag)
                 dic_pre = Tool().yaml_manage(yaml_path_pre)
                 if self.yaml_title in dic_pre.keys():
                     pre_tag = dic_pre[self.yaml_title]
-
                 #step2: 将规则实例化，借助Rule_cc_veh类
                 rule_obj = rule_f.Rule(case, para_action, para_odd, geo_tag, pre_tag)
                 #step3: 展开成具体case，以字典的格式
