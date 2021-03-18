@@ -1,31 +1,35 @@
-要求：
+几层嵌套与筛选
+1. feature层：
+   举例：比如cc,ilc
+   实现：通过函数调用或不调用
+2. 参数yaml层：
+   举例：对空载，满载，无目标，轿车目标，卡车目标做展开。
+   实现：通过遍历预设的参数yaml文件夹
+3. case一级目录：
+   举例：比如cc_3
+   实现：通过函数调或不调用
+4. case二级目录：
+   举例：比如noload时候，cc_3_1, cc_3_2，但是在payload时候只有cc_3_2或者没有cc_3的case
+   实现：根据yaml中预设项筛选
+5. 单个case的参数层：
+   举例：比如3%常规坡道情况下，需要对20、40、60kph做测试，但是5%大坡道情况下，仅对40kph做展开。
+   实现：根据yaml中不同odd参数与action参数的绑定关系
+备注：除了上面的几层嵌套，还有yaml本身的嵌套关系。后续看看是否可以做些简化。
+
+后期可以实现：
+1. 按实车或仿真提取（第一层，目前也是放在第一层通过函数调用来区分）
+2. 按feature提取（第一层）
+3. 按odd提取（第二层）
+4. 按典型场景提取，比如cutin，approach（第三层）
+
+对case库的要求
+1. summary中待替换的参数名，一定要与yaml中参数名保持一直
+
+对yaml的要求：
 1. relation.yaml中的行列关系，必须与case库中的关系一致
 2. 参数yaml中的参数名必须与case库中summary部分的参数名一致
+3. para，para_action，para_odd中及时后面是空的，也要写
 
 想法记录：
-1. 开发一个excel转yaml的工具（高优先级）
+1. 开发一个excel转yaml的工具
 2. relation.yaml 中行列关系，通过自动化抓取的方式实现
-3. 配置vscod的编译环境
-4. 如何满足700mcurve时做多个遍历，但是在500mcurve时只做单个或少量遍历？？？？（高优先级）
-
-0316改进：（程伟）
-1. 调整了case库文件的格式，比如
-      1）区分实车测试和HILL测试的推荐测试
-  2）推荐参数区分为odd和action
-  3）将action和通过条件部分，从格式上往前移，避免后期tag频繁变更，需要调整行列关系
-2. yaml中调整
-  1）调整了relation.yaml中的行列对应关系；
-  2) 原para改为para_odd和para_action；
-  3）para_odd部分“1% uphill”改为“1%”，“500m curve”改为“500m“；
-3， 代码调整
-  1）针对上面的yaml调整，对rule.py做修改；
-  2）原先para_action部分也采用追加形式，现在修改为参数替换replace的方式。前一种方式，不同case需要不同的追加描述，后者适应性更好;
-  3）通过上一步的改进，rule.py的适用性更好，不仅可以使用cc,而且可以使用ilc 
-
-0317改进：（程伟）
-1. ralation.yaml 中增加了case
-2. concrete_cc.py 增加了判断，如果relation.yaml中缺少了某个case，依然可以正常输出
-3. concrete_cc.py 中对case的遍历，采用了for循环的方式
-4. 调整了参数yaml的格式，将空载，无目标，轿车目标，卡车目标等前提因素单独作为一个yaml
-
-hello

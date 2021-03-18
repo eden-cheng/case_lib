@@ -9,9 +9,9 @@ case_path_cc_veh: "./concrete_case/"
 #实车测试特征值
 cc_charact_values:
   cc_noload_none: "./yaml_cc/cc_noload_none.yaml"
-  cc_noload_truck: "./yaml_cc/cc_noload_truck.yaml"
-  cc_noload_sedan: "./yaml_cc/cc_noload_sedan.yaml"
-  cc_payload_none: "./yaml_cc/cc_payload_none.yaml"
-  cc_payload_sedan: "./yaml_cc/cc_payload_sedan.yaml"
+  #cc_noload_truck: "./yaml_cc/cc_noload_truck.yaml"
+  #cc_noload_sedan: "./yaml_cc/cc_noload_sedan.yaml"
+  #cc_payload_none: "./yaml_cc/cc_payload_none.yaml"
+  #cc_payload_sedan: "./yaml_cc/cc_payload_sedan.yaml"
 
 

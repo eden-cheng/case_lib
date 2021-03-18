@@ -20,18 +20,13 @@ class Rule():
 
     def geo_ex(self):
         """对道路几何展开。既有对summary_odd的追加，也有tag"""
-        #默认平直路
-        if '平直路' in self.arr_geo_tag['geo']: 
-            dic_default = {'summary' : self.func('summary') + ' (平直路)', 'road_geo' : '平直路'}
-            self.temp.append(dic_default)
-        #对弯道和坡道展开
-        geos = ['curve', 'uphill', 'downhill']
+        geos = ['default', 'curve', 'uphill', 'downhill']
         for geo in geos:
             if geo in self.arr_geo_tag['geo']:
-                #self.func_01(self.arr_odd[geo], self.case[3].value, geo)
-                for i in self.arr_odd[geo]:
-                    dic = {'summary' : self.func('summary') + ' (' + i + '_' + geo + ')', 'road_geo' : geo}
-                    self.temp.append(dic)
+                if geo in self.arr_odd.keys():
+                    for i in self.arr_odd[geo]:
+                        dic = {'summary' : self.func('summary') + ' (' + i + '_' + geo + ')', 'road_geo' : geo}
+                        self.temp.append(dic)
 
     def summary_action_ex(self):
         if self.arr_action:
@@ -79,4 +74,14 @@ class Rule():
         for dic in self.temp:
             dic['id'] = self.func('id') + '-' + str(i)
             dic['feature'] = self.func('feature')
+            i += 1   #python没有++运算符
+
+    def feature_input(self):
+        for dic in self.temp:
+            dic['feature'] = self.func('feature')
+
+    def id_ex(self):
+        i = 1
+        for dic in self.temp:
+            dic['id'] = self.func('id') + '-' + str(i)
             i += 1   #python没有++运算符
