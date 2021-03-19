@@ -1,15 +1,24 @@
 #注意，使用相对路径，且路径适用linux
 
 #场景库
-lib_path: "./TC_LIB_210205.xlsx"
+lib_path: "./TC_LIB.xlsx"
 
 #输出的具体场景（路径，非文件名）
-case_path_cc_veh: "./concrete_case/"
+case_path_cc_veh: "./veh_case/"
 
 #实车测试特征值
 cc_charact_values:
   cc_noload_none: "./yaml_cc/cc_noload_none.yaml"
   #cc_noload_truck: "./yaml_cc/cc_noload_truck.yaml"
   #cc_noload_sedan: "./yaml_cc/cc_noload_sedan.yaml"
+<<<<<<< HEAD
   cc_payload_none: "./yaml_cc/cc_payload_none.yaml"
   #cc_payload_sedan: "./yaml_cc/cc_payload_sedan.yaml"
+=======
+  #cc_payload_none: "./yaml_cc/cc_payload_none.yaml"
+  #cc_payload_sedan: "./yaml_cc/cc_payload_sedan.yaml"
+
+cc_pre: "./yaml_cc/cc_prerequsite.yaml"
+
+
+>>>>>>> eden0318
