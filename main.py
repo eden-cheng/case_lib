@@ -1,4 +1,5 @@
-import concrete_f
+from veh_concrete import veh_feature_f
+from hill_concrete import hill_feature_f
 import tool_f
 
 def input_file():
@@ -9,12 +10,10 @@ def input_file():
     input_file = file_dic['lib_path']     #从字典中，提取场景库的文件路径
     return input_file
 
-lib = concrete_f.Concrete(input_file())
-#CC 实车
-lib.cc_veh_test()
-#ILC 实车
-lib.ilc_veh_test()
-#CC 仿真
-lib.cc_hill_test()
-#ILC 仿真
-lib.ilc_hill_test()
+#实车测试
+veh_ex = veh_feature_f.Feature_ex(input_file())
+veh_ex.test()
+
+#仿真测试
+hill_ex = hill_feature_f.Feature_ex(input_file())
+hill_ex.test()

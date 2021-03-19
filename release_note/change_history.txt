@@ -24,3 +24,8 @@
   调整了参数yaml的结构，原来para_action,para_odd,geo_tag。调整为para_group: [group1: [para_odd, para_action], group2: [para_odd, para_action]]
 2.因为上面的更改，原本对“平直路”的设计也需要做调整，新增default的tag
 3.将坡道的1%，3%，5%和500m,700m, 900m替换为汉语的程度表达
+
+0319(程伟)
+1. 调整了文件名和目录结构，cc实例化和ilc实例化分别归在两个目录下
+2. 将原tool文件下的两个类，拆分成了Tool类和veh_expand类
+3. 将cc_prerequiste.yaml的文件路径，放到file.yaml中，便于后期维护

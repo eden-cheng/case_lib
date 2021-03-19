@@ -69,13 +69,6 @@ class Rule():
             for key, value in excution.items():
                 i[key] = value
 
-    def other_ex(self):
-        i = 1
-        for dic in self.temp:
-            dic['id'] = self.func('id') + '-' + str(i)
-            dic['feature'] = self.func('feature')
-            i += 1   #python没有++运算符
-
     def feature_input(self):
         for dic in self.temp:
             dic['feature'] = self.func('feature')
