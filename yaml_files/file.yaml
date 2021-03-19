@@ -13,5 +13,3 @@ cc_charact_values:
   #cc_noload_sedan: "./yaml_cc/cc_noload_sedan.yaml"
   cc_payload_none: "./yaml_cc/cc_payload_none.yaml"
   #cc_payload_sedan: "./yaml_cc/cc_payload_sedan.yaml"
-
-
