@@ -1,0 +1,48 @@
+#CC，空载，卡车目标
+
+cc_8_1:
+  para_action:
+  para_odd:
+  geo_tag:
+    geo: ['平直路']
+
+cc_8_2:
+  para_action:
+  para_odd:
+    curve: ['700m']
+  geo_tag:
+    geo: ['curve']
+
+cc_8_3:
+  para_action:
+  para_odd:
+    curve: ['700m']
+  geo_tag:
+    geo: ['curve']
+
+cc_8_4:
+  para_action:
+  para_odd:
+    uphill: ['3%']
+  geo_tag:
+    geo: ['uphill']
+
+cc_8_5:
+  para_action:
+  para_odd:
+    uphill: ['3%']
+  geo_tag:
+    geo: ['uphill']
+
+cc_11_1:
+  para_action:
+    tv_initial: ['120kph']
+    tv_target: ['40kph']
+    tv_acc: ['-3mpss']
+    relative_dis: ['40m']
+  para_odd:
+    uphill: ['3%']
+    downhill: ['3%']
+    curve: ['700m']
+  geo_tag:
+    geo: ['平直路', 'curve', 'downhill', 'uphill']
