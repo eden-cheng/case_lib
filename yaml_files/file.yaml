@@ -11,14 +11,14 @@ cc_charact_values:
   cc_noload_none: "./yaml_cc/cc_noload_none.yaml"
   #cc_noload_truck: "./yaml_cc/cc_noload_truck.yaml"
   #cc_noload_sedan: "./yaml_cc/cc_noload_sedan.yaml"
-<<<<<<< HEAD
+# <<<<<<< HEAD
   cc_payload_none: "./yaml_cc/cc_payload_none.yaml"
   #cc_payload_sedan: "./yaml_cc/cc_payload_sedan.yaml"
-=======
+# =======
   #cc_payload_none: "./yaml_cc/cc_payload_none.yaml"
   #cc_payload_sedan: "./yaml_cc/cc_payload_sedan.yaml"
 
 cc_pre: "./yaml_cc/cc_prerequsite.yaml"
 
 
->>>>>>> eden0318
+# >>>>>>> eden0318

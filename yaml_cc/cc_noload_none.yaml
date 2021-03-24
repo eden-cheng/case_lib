@@ -10,8 +10,6 @@ cc_1_1:
         downhill: ['缓坡', '适中', '陡坡']
         curve: ['小弯', '适中', '急弯']
         default: ['平直路']
-  geo_tag:
-    geo: ['default', 'curve', 'downhill', 'uphill']
 
 #运动中，居中进AD
 cc_2_1:
@@ -33,8 +31,6 @@ cc_2_1:
       para_odd:
         uphill: ['适中']
         downhill: ['适中']
-  geo_tag:
-    geo: ['default', 'downhill', 'uphill']
 
 #运动中，偏置向左进AD
 cc_3_1:
@@ -63,8 +59,6 @@ cc_3_1:
           hv_deviation: ['10cm', '20cm', '30cm']
       para_odd:
         curve: ['缓和']
-  geo_tag:
-    geo: ['default', 'curve']
 
 #运动中，偏置向右进AD
 cc_3_2:
@@ -81,5 +75,3 @@ cc_3_2:
           hv_deviation: ['10cm', '20cm', '30cm']
       para_odd:
         curve: ['适中']
-  geo_tag:
-    geo: ['default', 'curve']

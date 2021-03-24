@@ -22,11 +22,11 @@ class Rule():
         """对道路几何展开。既有对summary_odd的追加，也有tag"""
         geos = ['default', 'curve', 'uphill', 'downhill']
         for geo in geos:
-            if geo in self.arr_geo_tag['geo']:
-                if geo in self.arr_odd.keys():
-                    for i in self.arr_odd[geo]:
-                        dic = {'summary' : self.func('summary') + ' (' + i + '_' + geo + ')', 'road_geo' : geo}
-                        self.temp.append(dic)
+            # if geo in self.arr_geo_tag['geo']:
+            if geo in self.arr_odd.keys():
+                for i in self.arr_odd[geo]:
+                    dic = {'summary' : self.func('summary') + ' (' + i + '_' + geo + ')', 'road_geo' : geo}
+                    self.temp.append(dic)
 
     def summary_action_ex(self):
         if self.arr_action:
@@ -47,27 +47,44 @@ class Rule():
             arr.append(i.copy())   #注意，一定要 .copy()
         self.temp = arr
     
-    def excution_input(self):
+    def execution_input(self):
         str01 = "initial status of hv"
         str02 = "initial status of tv"
         str03 = "action of hv"
         str04 = "action of tv"
-        excution = {str01: self.func(str01), 
+        execution = {str01: self.func(str01), 
                     str02: self.func(str02), 
                     str03: self.func(str03), 
                     str04: self.func(str04)}
         for i in self.temp:
-            for key, value in excution.items():
+            for key, value in execution.items():
                 i[key] = value
 
     def criteria_input(self):  #后面需要根据通过指标来展开
         str05 = 'subjective criteria'
         str06 = 'objective criteria'
-        excution = {str05: self.func(str05), 
+        execution = {str05: self.func(str05), 
                     str06: self.func(str06)}
         for i in self.temp:
-            for key, value in excution.items():
+            for key, value in execution.items():
                 i[key] = value
+    
+    def rm_execution_input(self):
+        for dic in self.temp:
+            dic['rm_execution'] = self.func('rm_execution')
+    
+    def rm_criteria_input(self):
+        str08 = 'rm_sub_criteria'
+        str09 = 'rm_obj_criteria'
+        execution = {str08: self.func(str08),
+                    str09: self.func(str09)}
+        for i in self.temp:
+            for key, value in execution.items():
+                i[key] = value
+    
+    def keywords_ex(self):
+        for dic in self.temp:
+            dic['keywords'] = self.func('keywords')
 
     def feature_input(self):
         for dic in self.temp:

@@ -33,7 +33,7 @@ class Expand():
                     #step1: 从yaml文件获取不同odd的实车测试的特征值
                     para_action = value['para_action']
                     para_odd = value['para_odd']
-                    geo_tag = (self.yaml_content[id])['geo_tag']
+                    geo_tag = value['para_odd'].keys()
                     #step2：从yaml文件获取不同odd的默认tag
                     yaml_path_pre = self.func_tool(yaml_path_file)['cc_pre']
                     dic_pre = self.func_tool(yaml_path_pre)
@@ -58,6 +58,9 @@ class Expand():
         rule_obj.geo_ex()       #将道路曲率或坡道等几何因素展开，一方面展开tag，一方面展开参数
         rule_obj.summary_action_ex()             #将目标车的可设参数展开
         rule_obj.pre_ex()            #将光照，天气，目标类型等tag展开
-        rule_obj.excution_input()    #将执行部分的内容填到展开的case中
+        rule_obj.execution_input()    #将执行部分的内容填到展开的case中
         rule_obj.criteria_input()    #将通过条件部分的内容填到展开的case中
         rule_obj.feature_input()
+        rule_obj.keywords_ex()
+        rule_obj.rm_execution_input()
+        rule_obj.rm_criteria_input()

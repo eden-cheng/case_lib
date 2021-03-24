@@ -11,12 +11,12 @@ class Feature_ex():
 
     def test(self):
         self.cc()
-        self.ilc()
+        # self.ilc()
 
     def cc(self):
         ws = self.wb['CC-lib']
         print('\033[0;34m' + 'CC HILL to do' +'\033[0m')
 
-    def ilc(self):
-        ws = self.wb['ILC-lib']
-        print('\033[0;34m' + 'ILC HILL to do' +'\033[0m')
+    # def ilc(self):
+    #     ws = self.wb['ILC-lib']
+    #     print('\033[0;34m' + 'ILC HILL to do' +'\033[0m')

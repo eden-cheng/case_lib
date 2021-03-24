@@ -3,6 +3,7 @@ import yaml
 import os
 
 yaml_path_file = "./yaml_files/file.yaml"
+yaml_relation_file = "./yaml_files/relation.yaml"
 
 class Tool():
     def yaml_manage(self, file_path):
@@ -31,18 +32,17 @@ class Tool():
         out_path = (self.yaml_manage(yaml_path_file))['case_path_cc_veh']
         wb = openpyxl.Workbook()
         ws = wb.active
-        titles = ['id', 'feature', 'summary', 'weather', 'illumination', 'load', 'speed_limit', 
-                'tv', 'road_geo', 'initial status of hv', 'initial status of tv', 'action of hv', 
-                'action of tv', 'subjective criteria', 'objective criteria']
+        output_titles = (self.yaml_manage(yaml_relation_file))['output_titles']
+        
         #将标题填入excel 
-        for i in range(len(titles)):
-            ws.cell(row = 1, column = i + 1).value = titles[i]
+        for i in range(len(output_titles)):
+            ws.cell(row = 1, column = i + 1).value = output_titles[i]
         #将expand整理出的case，从字典形式填入Excel中
         j = 2
         for dic in arr:
             k = 1
             for title, content in dic.items():
-                ws.cell(row = j, column = k).value = dic[titles[k-1]]
+                ws.cell(row = j, column = k).value = dic[output_titles[k-1]]
                 k += 1
             j = j + 1
         #python生成文件路径
