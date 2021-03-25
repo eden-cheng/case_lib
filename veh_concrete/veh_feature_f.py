@@ -29,6 +29,6 @@ class Feature_ex():
             arr = obj.ex_obj.arr
             self.t_obj.import_data(arr, key)    #前面通过cc_ex后，具体化的case全部添加到字典中，现在写入excel中
 
-    # def ilc(self):
-    #     ws = self.wb['ILC-lib']
-    #     print('\033[0;34m' + 'ILC VEH to do' +'\033[0m')
+    def ilc(self):
+        ws = self.wb['ILC-lib']
+        print('\033[0;34m' + 'ILC VEH to do' +'\033[0m')
