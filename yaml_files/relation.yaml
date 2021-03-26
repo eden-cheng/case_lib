@@ -1,27 +1,150 @@
-#注意，如果有新增行列，一定要对下面的数字做调整
-
-#case与行号的对应关系
-CC_1_1: 4
-CC_2_1: 10
-CC_3_1: 21
-
-#case与列号的对应关系
-# colum_relation:
-#   id : 0
-#   feature : 2
-#   summary : 3
-#   initial status of hv : 8
-#   initial status of tv : 9
-#   action of hv : 10
-#   action of tv : 11
-#   subjective criteria : 14
-#   objective criteria : 15
-#   rm_execution : 7
-#   rm_sub_criteria : 12
-#   rm_obj_criteria : 13
-#   keywords : 4
-  
-# case输出标题
 output_titles : ['id', 'feature', 'summary', 'keywords', 'weather', 'illumination', 'load', 'speed_limit', 
           'tv', 'road_geo', 'rm_execution', 'initial status of hv', 'initial status of tv', 'action of hv', 
           'action of tv', 'rm_sub_criteria', 'rm_obj_criteria', 'subjective criteria', 'objective criteria']
+
+# 列号
+id: 1
+feature: 3
+summary: 4
+keywords: 5
+rm_execution: 8
+initial status of hv: 9
+initial status of tv: 10
+action of hv: 11
+action of tv: 12
+rm_sub_criteria: 13
+rm_obj_criteria: 14
+subjective criteria: 15
+objective criteria: 16
+
+# lib行号
+CC_1_1: 4
+CC_2_1: 6
+CC_3_1: 8
+CC_3_2: 9
+CC_4_1: 11
+CC_5_1: 13
+CC_5_2: 14
+CC_6_1: 16
+CC_6_2: 17
+CC_7_1: 19
+CC_7_2: 20
+CC_7_3: 21
+CC_7_4: 22
+CC_8_1: 24
+CC_8_2: 25
+CC_8_3: 26
+CC_8_4: 27
+CC_8_5: 28
+CC_9_1: 30
+CC_9_2: 31
+CC_9_3: 32
+CC_9_4: 33
+CC_10_1: 35
+CC_11_1: 37
+CC_12_1: 39
+CC_13_1: 41
+CC_13_2: 42
+CC_14_1: 44
+CC_14_2: 45
+CC_15_1: 47
+CC_15_2: 48
+CC_15_3: 49
+CC_15_4: 50
+CC_16_1: 52
+CC_16_2: 53
+CC_17_1: 65
+CC_17_2: 56
+CC_18_1: 67
+CC_18_2: 68
+CC_19_1: 73
+CC_19_2: 74
+CC_19_3: 75
+CC_18_3: 69
+CC_18_4: 70
+CC_18_5: 71
+CC_19_4: 76
+CC_20_1: 78
+CC_21_1: 80
+CC_21_2: 81
+CC_22_1: 83
+CC_22_2: 84
+CC_23_1: 86
+CC_23_2: 87
+CC_24_1: 89
+CC_24_2: 90
+CC_24_3: 91
+CC_25_1: 93
+CC_25_2: 94
+CC_25_3: 95
+CC_25_4: 96
+CC_25_5: 97
+CC_25_6: 98
+CC_25_7: 99
+CC_25_8: 100
+
+# para行号
+CC_1_1: 4
+CC_2_1: 10
+CC_3_1: 16
+CC_3_2: 21
+CC_4_1: 27
+CC_5_1: 33
+CC_5_2: 38
+CC_6_1: 44
+CC_6_2: 45
+CC_7_1: 47
+CC_7_2: 48
+CC_7_3: 49
+CC_7_4: 50
+CC_8_1: 52
+CC_8_2: 53
+CC_8_3: 54
+CC_8_4: 55
+CC_8_5: 56
+CC_9_1: 58
+CC_9_2: 59
+CC_9_3: 60
+CC_9_4: 61
+CC_10_1: 63
+CC_11_1: 65
+CC_12_1: 67
+CC_13_1: 69
+CC_13_2: 70
+CC_14_1: 72
+CC_14_2: 73
+CC_15_1: 75
+CC_15_2: 76
+CC_15_3: 77
+CC_15_4: 78
+CC_16_1: 80
+CC_16_2: 81
+CC_17_1: 93
+CC_17_2: 84
+CC_18_1: 95
+CC_18_2: 96
+CC_19_1: 101
+CC_19_2: 102
+CC_19_3: 103
+CC_18_3: 97
+CC_18_4: 98
+CC_18_5: 99
+CC_19_4: 104
+CC_20_1: 106
+CC_21_1: 108
+CC_21_2: 109
+CC_22_1: 111
+CC_22_2: 112
+CC_23_1: 114
+CC_23_2: 115
+CC_24_1: 117
+CC_24_2: 118
+CC_24_3: 119
+CC_25_1: 121
+CC_25_2: 122
+CC_25_3: 123
+CC_25_4: 124
+CC_25_5: 125
+CC_25_6: 126
+CC_25_7: 127
+CC_25_8: 128
